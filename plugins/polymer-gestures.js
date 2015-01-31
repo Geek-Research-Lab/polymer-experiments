@@ -10,21 +10,21 @@
   var thisFile = 'polymer-gestures.js';
   var scopeName = 'PolymerGestures';
   var modules = [
-    'src/scope.js',
-    'src/targetfind.js',
-    'src/touch-action.js',
-    'src/eventFactory.js',
-    'src/pointermap.js',
-    'src/dispatcher.js',
-    'src/mouse.js',
-    'src/touch.js',
-    'src/ms.js',
-    'src/pointer.js',
-    'src/platform-events.js',
-    'src/track.js',
-    'src/hold.js',
-    'src/tap.js',
-    'src/pinch.js'
+    'gestures/scope.js',
+    'gestures/targetfind.js',
+    'gestures/touch-action.js',
+    'gestures/eventFactory.js',
+    'gestures/pointermap.js',
+    'gestures/dispatcher.js',
+    'gestures/mouse.js',
+    'gestures/touch.js',
+    'gestures/ms.js',
+    'gestures/pointer.js',
+    'gestures/platform-events.js',
+    'gestures/track.js',
+    'gestures/hold.js',
+    'gestures/tap.js',
+    'gestures/pinch.js'
   ];
 
   window[scopeName] = {
