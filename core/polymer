@@ -1,0 +1,65 @@
+<link rel="import" href="plugins/polymer-gestures.html">
+<link rel="import" href="plugins/polymer-expressions.html">
+<link rel="import" href="plugins/layout.html">
+<script src="plugins/polymer.js"></script>
+<script src="plugins/boot.js"></script>
+<script src="plugins/module.js"></script>
+
+<!-- Do not load in the presence of webcomponents.js  -->
+<scripts>
+	<script>
+	(function() {
+		// evacipate all scripts in parent!
+		if (window.WebComponents) {
+			var scripts = document._currentScript.parentNode;
+			scripts.parentNode.removeChild(scripts);
+		}
+	})();
+	</script>
+	<script src="plugins/compat.js"></script>
+	<script src="plugins/base_imports.js"></script>
+	<script src="plugins/unresolved.js"></script>
+</scripts>
+
+<script src="plugins/observe.js"></script>
+<script src="plugins/NodeBind.js"></script>
+<script src="plugins/TemplateBinding.js"></script>
+<script src="plugins/url.js"></script>
+<script src="plugins/microtask.js"></script>
+<script src="plugins/flush.js"></script>
+
+<script src="plugins/url1.js"></script>
+<script src="plugins/loader.js"></script>
+<script src="plugins/styleloader.js"></script>
+<script src="plugins/lang.js"></script>
+<script src="plugins/job.js"></script>
+<script src="plugins/dom.js"></script>
+<script src="plugins/super.js"></script>
+<script src="plugins/deserialize.js"></script>
+<script src="plugins/api.js"></script>
+<script src="plugins/utils.js"></script>
+<script src="plugins/events.js"></script>
+<script src="plugins/attributes.js"></script>
+<script src="plugins/properties.js"></script>
+<script src="plugins/mdv.js"></script>
+<script src="plugins/base.js"></script>
+<script src="plugins/styles.js"></script>
+<script src="src/declaration/polymer.js"></script>
+<script src="src/declaration/path.js"></script>
+<script src="src/declaration/styles.js"></script>
+<script src="src/declaration/events.js"></script>
+<script src="src/declaration/properties.js"></script>
+<script src="src/declaration/attributes.js"></script>
+<script src="src/declaration/mdv.js"></script>
+<script src="src/declaration/prototype.js"></script>
+<script src="src/declaration/queue.js"></script>
+<script src="src/declaration/polymer-element.js"></script>
+<script src="plugins/import.js"></script>
+<script src="plugins/auto-binding.js"></script>
+
+<!-- CREDITS -->
+<!--
+ Copyright 2013 The Polymer Authors. All rights reserved.
+ Use of this source code is governed by a BSD-style
+ license that can be found in the LICENSE file.
+-->
