@@ -58,12 +58,12 @@
 
   // Load.
   var ShadowDOMNative = [
-    'WebComponents/shadowdom.js'
+    'components/shadowdom.js'
   ];
 
   var ShadowDOMPolyfill = [
-    'ShadowDOM/ShadowDOM.js',
-    'WebComponents/shadowdom.js',
+    'components/Shadow-DOM.js',
+    'components/shadowdom.js',
     'ShadowCSS/ShadowCSS.js'
   ];
 
@@ -74,14 +74,14 @@
   var modules = [].concat(
     ShadowDOM,
     [
-      'HTMLImports/HTMLImports.js',
+      'components/HTMLImports.js',
       'CustomElements/CustomElements.js',
-      'WebComponents/lang.js',
+      'components/lang.js',
       // these scripts are loaded here due to polyfill timing issues
-      'WebComponents/dom.js',
-      'WebComponents/unresolved.js',
+      'components/dom.js',
+      'components/unresolved.js',
       // back compat.
-      'WebComponents/bc.js'
+      'components/bc.js'
     ]
   );
 
