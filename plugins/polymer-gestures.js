@@ -37,7 +37,7 @@
   var basePath = src.slice(0, src.indexOf(thisFile));
 
   if (!window.PolymerLoader) {
-    var path = basePath + '../tools/loader/loader.js';
+    var path = basePath + 'loader.js';
     document.write('<script src="' + path + '"></script>');
   }
 
