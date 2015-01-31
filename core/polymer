@@ -44,16 +44,16 @@
 <script src="plugins/mdv.js"></script>
 <script src="plugins/base.js"></script>
 <script src="plugins/styles.js"></script>
-<script src="src/declaration/polymer.js"></script>
-<script src="src/declaration/path.js"></script>
-<script src="src/declaration/styles.js"></script>
-<script src="src/declaration/events.js"></script>
-<script src="src/declaration/properties.js"></script>
-<script src="src/declaration/attributes.js"></script>
-<script src="src/declaration/mdv.js"></script>
-<script src="src/declaration/prototype.js"></script>
-<script src="src/declaration/queue.js"></script>
-<script src="src/declaration/polymer-element.js"></script>
+<script src="plugins/polymer1.js"></script>
+<script src="plugins/path.js"></script>
+<script src="plugins/styles1.js"></script>
+<script src="plugins/events1.js"></script>
+<script src="plugins/properties1.js"></script>
+<script src="plugins/attributes1.js"></script>
+<script src="plugins/mdv1.js"></script>
+<script src="plugins/prototype.js"></script>
+<script src="plugins/queue.js"></script>
+<script src="plugins/polymer-element.js"></script>
 <script src="plugins/import.js"></script>
 <script src="plugins/auto-binding.js"></script>
 
