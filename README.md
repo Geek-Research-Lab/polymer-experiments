@@ -20,5 +20,4 @@ Download directly from their <a href="https://github.com/Polymer/polymer/release
 <br><br>
 Here is a polymer starter tutorials for creating first fu-ck-a-mental sugary app --- <a href="https://github.com/Polymer/polymer-tutorial/archive/master.zip">Download</a><br>
 <br>
-All is well... What is this repository all about? <br>
-This repository aims to try "independencies" rather than "dependencies" starting from polymer stratchy boogly. =P
+[Current Status] Not working when tried manually... And not working when tried directly..
