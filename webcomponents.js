@@ -64,7 +64,7 @@
   var ShadowDOMPolyfill = [
     'components/Shadow-DOM.js',
     'components/shadowdom.js',
-    'ShadowCSS/ShadowCSS.js'
+    'components/ShadowCSS.js'
   ];
 
   // select ShadowDOM impl
@@ -75,7 +75,7 @@
     ShadowDOM,
     [
       'components/HTMLImports.js',
-      'CustomElements/CustomElements.js',
+      'components/CustomElements.js',
       'components/lang.js',
       // these scripts are loaded here due to polyfill timing issues
       'components/dom.js',
