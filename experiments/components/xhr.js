@@ -2,7 +2,7 @@ var xhr = function(gems) {
 	// gems => scope
 	'use strict';
 	var ig = this;
-	var unwrap = gems.unwrap;
+	//var unwrap = gems.unwrap;
 
 	// request => ok!
 	XMLHttpRequest.prototype.ok = function() {
