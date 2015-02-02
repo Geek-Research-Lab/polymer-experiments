@@ -34,6 +34,12 @@ var WebComponentsMix = function() {
       flags.log = {};
     }
   }
+
+  // Load
+  var xNative = [
+    'components/shadow-mix.js'
+  ];
+
   //
   // Still more to add!
   //
