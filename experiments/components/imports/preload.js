@@ -31,6 +31,9 @@ var preload = function() {
 				// t => type
 				u: a.u,
 				t: "cache"
+			},
+			function() {
+				onPreload(a);
 			});
 		}
 	};
