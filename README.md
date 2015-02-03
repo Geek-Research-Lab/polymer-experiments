@@ -15,6 +15,6 @@ And start exploring! Do something crazy with it.
 
 Interested in Web-Components-Mix?? <br>
 Then, Directly jump into experiments:- <br>
-[1] Experiments -- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/tree/webcomponents-mix/experiments">teleport here</a><br>
-[2] Docs to get started into experiments -- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/tree/webcomponents-mix/docs">teleport here</a>
+[1] Experiments -- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/tree/webcomponents-mix/experiments">CLICK HERE</a><br>
+[2] Docs to get started into experiments -- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/tree/webcomponents-mix/docs">CLICK HERE</a>
 <br>
