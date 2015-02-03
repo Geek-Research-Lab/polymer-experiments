@@ -3,8 +3,8 @@
   'base.js',
   'module.js',
   'path.js',
-  'xhr.js',
-  'Loader.js',
+  'xhr.js', --> done
+  'Loader.js', --> working-on
   'Observer.js',
   'parser.js',
   'importer.js',
