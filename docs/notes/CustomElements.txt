@@ -1,0 +1,8 @@
+  'WeakMap.js',
+  'MutationObserver.js',
+  'customs/base.js',
+  'customs/traverse.js',
+  'customs/observe.js',
+  'customs/upgrade.js',
+  'customs/register.js',
+  'customs/boot.js'
