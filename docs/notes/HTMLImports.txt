@@ -12,4 +12,6 @@
   'boot.js'
 
 newer addition:-
-'preload.js' --> working-on
+'preload.js' --> done
+
+Note:- "done" does not mean that it is 100% completed. It means that it is completed, but it will be edited in future too.
