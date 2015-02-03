@@ -9,3 +9,9 @@ MeowJS Load => <a href="https://github.com/ashumeow/MeowLoadJS">Click here</a>
 <br><b>Step 2: </b>Download this raw package --- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/archive/p0.0.1.zip">LATEST</a>
 <br>
 And Do something! =D =D
+<br>
+<br>
+<b>Advantages:</b><br>
+[1] No frameworks required <br>
+[2] No tools required <br>
+[3] Just HTML and Javascript knowledge + A web browser (^_^)
