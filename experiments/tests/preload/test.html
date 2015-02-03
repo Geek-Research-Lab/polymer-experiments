@@ -2,8 +2,25 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="preload" href="test.html" as="html">
 <link rel="preload" href="preload.js" as="javascript">
 </head>
+<script>
+// html
+var xxx = document.createElement("link");
+xxx.setAttribute("rel", "preload");
+xxx.setAttribute("href", "test.html");
+document.getElementsByTagName("head")[0].appendChild(xxx);
+// JS
+var xx = document.createElement("link");
+xx.setAttribute("rel", "preload");
+xx.setAttribute("href", "preload.js");
+document.getElementsByTagName("head")[0].appendChild(xx);
+</script>
+<script type="text/javascript" src="preload.js">
+// preloading assets
+	onPreload(a);
+</script>
 <body>
 --- add contents ---
 </body>
