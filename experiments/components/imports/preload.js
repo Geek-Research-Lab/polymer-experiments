@@ -6,7 +6,7 @@ var preload = function() {
 	2. _preload
 	*/
 	var onPreload;
-	preload.onPreload = function(a, s, l) {
+	preload.onPreload = function(a, pl) {
 		// a => asset
 		// s => state
 		// pl => preloaded
@@ -17,7 +17,21 @@ var preload = function() {
 			ppl.call();
 		});
 	};
-	//
-	// Still more to code
-	//
+	var _preload;
+	preload._preload = function(a, pl) {
+		// a => asset
+		// s => state
+		// pl => preloaded
+		if(a.s === undefined) {
+			a.s = pl;
+			a.onPreload = [];
+			var la, u, t; // la => load assets
+			la({
+				// u => url
+				// t => type
+				u: a.u,
+				t: "cache"
+			});
+		}
+	};
 };
