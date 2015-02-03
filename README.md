@@ -4,13 +4,17 @@ WebComponents-Mix is a mixed version of <code>webcomponents.js + MeowJS</code>, 
 <br>
 Interested to do experiments?? <br>
 <br>
-Then, download the following packages:-<br>
+To build something in own, then download the following packages:-<br>
 [1] p0.0.0 ==> <a href="https://github.com/Geek-Research-Lab/polymer-experiments/archive/p0.0.0.zip">DOWNLOAD</a>
 <br>
 [2] MeowJS (latest release) ==> <a href="https://github.com/Geek-Research-Lab/MeowJS/archive/v0.4.20.zip">DOWNLOAD</a>
 <br>
-And start exploring! <br>
+And start exploring! Do something crazy with it. 
 <br>
-Directly jump into experiments:- <br>
+<br>
+
+Interested in Web-Components-Mix?? <br>
+Then, Directly jump into experiments:- <br>
 [1] Experiments -- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/tree/webcomponents-mix/experiments">teleport here</a><br>
 [2] Docs to get started into experiments -- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/tree/webcomponents-mix/docs">teleport here</a>
+<br>
