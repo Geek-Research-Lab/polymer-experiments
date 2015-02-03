@@ -1,6 +1,6 @@
 #Exploration:-<br>
 <b>Step 1: </b>Follow the basic manual building to get good understanding --- <a href="https://github.com/Geek-Research-Lab/polymer-experiments/blob/webcomponents-mix/README.md">Click Here</a><br>
-And additionally for MeowJS general wiki --- <a href="https://github.com/Geek-Research-Lab/MeowJS/wiki">Click here</a><br>
+And additionally for MeowJS repo -- <a href="https://github.com/Geek-Research-Lab/MeowJS">Click here</a> and MeowJS general wiki --- <a href="https://github.com/Geek-Research-Lab/MeowJS/wiki">Click here</a><br>
 MeowJS PNG => <a href="https://github.com/dragonwolverines/Meow-PNG-Perf">click here</a><br>
 MeowJS KillCSS => (1) <a href="https://github.com/dragonwolverines/MeowKillCSS/tree/3D">3D</a> <br>and (2) <a href="https://github.com/dragonwolverines/MeowKillCSS/tree/loader">Loader</a><br>
 MeowJS Load => <a href="https://github.com/ashumeow/MeowLoadJS">Click here</a>
