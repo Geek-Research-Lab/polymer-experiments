@@ -4,7 +4,7 @@
   'module.js',
   'path.js',
   'xhr.js', --> done
-  'Loader.js', --> working-on
+  'Loader.js', --> done
   'Observer.js',
   'parser.js',
   'importer.js',
