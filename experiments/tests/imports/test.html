@@ -2,10 +2,31 @@
 <html>
 <head>
 <meta charset="utf-8">
-<script type="text/javascript" src="">
+<link rel="imports" href="test.html" as="html">
+<link rel="imports" href="imports.js" as="javascript">
+<script>
+// html
+var xxx = document.createElement("link");
+xxx.setAttribute("rel", "imports");
+xxx.setAttribute("href", "test.html");
+document.getElementsByTagName("head")[0].appendChild(xxx);
+// JS
+var xx = document.createElement("link");
+xx.setAttribute("rel", "imports");
+xx.setAttribute("href", "imports.js");
+document.getElementsByTagName("head")[0].appendChild(xx);
+</script>
+<!-- Attaching JS Files -->
+<script type="text/javascript" src="imports.js">
+</script>
+<script type="text/javascript" src="preload.js">
+</script>
+<script type="text/javascript" src="xhr.js">
+</script>
+<script type="text/javascript" src="loader.js">
 </script>
 </head>
 <body>
---- Under-Construction ---
+Hello Kepler! (^_^)
 </body>
 </html>
