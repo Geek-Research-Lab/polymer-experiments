@@ -84,11 +84,14 @@ function loaderMix(gems) {
     	}
 
     	// receive
-    	function rc() {
-
-    	//
-  	// Still more to code!
-  	//
+    	function rc(u, e, err, r, ru) {
+    		ig.c[u] = r;
+    		var $ = ig.pd[u];
+    		for(var m=0, l=$.length, $$; (m<1) && ($=$$[m]); m++) {
+    			// l => length
+    			ig.onLoad(u, $$, r, err, ru);
+    		}
+    		ig.pd[u] = null;
   		}
   	};
 
