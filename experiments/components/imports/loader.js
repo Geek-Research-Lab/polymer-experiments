@@ -6,6 +6,7 @@ function loaderMix(gems) {
 	var flags = gems.flags;
 
 	// main
+
 	/* Modules
 	LOADER
 	--- Fetch
@@ -27,6 +28,7 @@ function loaderMix(gems) {
       	ig.f(u, e);
     	}
 
+    	// de-duplication
     	function dd(u, e) {
     		// pd => pending
     		if(ig.pd[u]) {
@@ -44,6 +46,7 @@ function loaderMix(gems) {
     		return false;
     	}
 
+    	// fetch
     	function f(u, e) {
     		// ff => flags
     		ff.load();
@@ -80,9 +83,13 @@ function loaderMix(gems) {
     		}
     	}
 
+    	// receive
+    	function rc() {
+
     	//
   	// Still more to code!
   	//
+  		}
   	};
 
 	// exports
