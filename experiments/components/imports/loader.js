@@ -6,6 +6,12 @@ function loaderMix(gems) {
 	var flags = gems.flags;
 
 	// main
+	/* Modules
+	LOADER
+	--- Fetch
+	--- De-Duplication
+	--- Receive
+	*/
 	var loader = function(e) {
 	'use strict';
 	// u => url
@@ -19,6 +25,23 @@ function loaderMix(gems) {
     	if (!ig.dd(u, e)) {
       	// fetching the resource
       	ig.f(u, e);
+    	}
+
+    	function dd(u, e) {
+    		// pd => pending
+    		if(ig.pd[u]) {
+    			ig.pd[u].push(e);
+    			// fetching not required at this point
+    			return true;
+    		}
+    		var r; // r => resource
+    		if(ig.c[u]) {
+    			// c => cache
+    			ig.onLoad(u, e, ig.c[u]);
+    			return true;
+    		}
+    		ig.pd[u] = [e];
+    		return false;
     	}
 
     	function f(u, e) {
