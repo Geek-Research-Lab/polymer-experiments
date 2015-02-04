@@ -2,7 +2,7 @@ var xhr = function(gems) {
 	// gems => scope
 	'use strict';
 	var ig = this;
-	//var unwrap = gems.unwrap;
+	var unwrap = gems.unwrap;
 
 	// request => ok!
 	XMLHttpRequest.prototype.ok = function() {
@@ -11,24 +11,30 @@ var xhr = function(gems) {
 	};
 
 	// loading the request
-	XMLHttpRequest.prototype.load = function(url, next, nextContext) {
+	XMLHttpRequest.prototype.load = function(u, nxt, nc) {
+		// u => url
+		// lh => Location Header
+		// ff => flags
+		// ru => Redirected Url
+		// nxt => next
+		// nc => Next Context
 	var request = new XMLHttpRequest();
-    if (gems.flags.debug || gems.flags.bust) {
-      url += '?' + Math.random();
+    if (gems.ff.debug || gems.ff.bust) {
+      u += '?' + Math.random();
     }
-    request.open('GET', url, xhr.async);
+    request.open('GET', u, xhr.async);
     request.addEventListener('readystatechange', function(e) {
       if (request.readyState === 4) {
         // Servers redirecting an import add a Location header to help in polyfill correctly.
-        var locationHeader = request.getResponseHeader("Location");
-        var redirectedUrl = null;
-        if (locationHeader) {
+        var lh = request.getResponseHeader("Location");
+        var ru = null;
+        if (lh) {
         	// location is a relative path
         	// full path
-         	redirectedUrl = (locationHeader.substr( 0, 1 ) === "/") ? location.origin + locationHeader : locationHeader;                    
+         	ru = (lh.substr( 0, 1 ) === "/") ? location.origin + lh : lh;                    
         }
-        next.call(nextContext, !xhr.ok(request) && request,
-            request.response || request.responseText, redirectedUrl);
+        nxt.call(nc, !xhr.ok(request) && request,
+            request.response || request.responseText, ru);
       } });
     // sending request
     request.send();
@@ -43,7 +49,7 @@ var xhr = function(gems) {
 	*/
 
 	// loading the document
-	XMLHttpRequest.prototype.loadDocument = function(url, next, nextContext) {
-		ig.load(url, next, nextContext).responseType = 'document';
+	XMLHttpRequest.prototype.loadDocument = function(u, nxt, nc) {
+		ig.load(u, nxt, nc).responseType = 'document';
 	};
 };
