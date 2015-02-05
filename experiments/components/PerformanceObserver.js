@@ -4,11 +4,34 @@ var PerformanceObserver = function() {
 	-- observe
 	-- disconnect
 	*/
-
-
+	var perf = this;
+	PerformanceObserver.prototype = {
+	// observe
+	observe: function(target, opts) {
+		var events = table.get(target);
+		if(!events) {
+			table.set(target, events = []);
+		}
+		var Event;
+		for(var m = 0; m < events.length; m++) {
+			if(events[m].observer === perf) {
+				Event = events[m];
+				Event.removeListeners();
+				Event.options = opts;
+				break;
+			}
+		}
+		if(!Event) {
+			Event = new Event(perf, target, opts);
+			events.push(Event);
+			perf.push(target);
+		}
+		Event.addListeners();
+	}
 	//
 	// Still more to code
 	//
+	};
 };
 
 /* References:-
