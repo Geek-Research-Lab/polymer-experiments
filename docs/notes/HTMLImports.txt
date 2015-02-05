@@ -1,4 +1,4 @@
-  'WeakMap.js', --> working-on!
+  'WeakMap.js', --> done
   'MutationObserver.js', ---> working-on!
   'base.js',
   'module.js',
