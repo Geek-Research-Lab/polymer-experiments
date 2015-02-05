@@ -19,9 +19,32 @@ var WeakMap = function() {
 	http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap.prototype
 	//////////////
 	*/
+	var ig = this;
+	WeakMap.prototype = {
+		// set
+		// WeakMap.prototype.set(k, v)
+		set: function(k, v) {
+			// k => key
+			// v => value
+			// ent => entry
+			var ent = k[ig.name];
+			if(ent && ent[0] === k) {
+				ent[1] = v;
+			} else { // w => writable
+				defineProperty(k, ig.name, {v: [k, v], w: true});
+			}
+			return ig;
+		},
+		// get
+		// WeakMap.prototype.get(k)
+		get: function(k) {
+			var ent;
+			return (ent = k[ig.name]) && ent[0] === k ? ent[1] : undefined;
+		},
 	//
 	// Still more to code!
 	//
+	};
 };
 
 /*
