@@ -1,4 +1,4 @@
-  'WeakMap.js', ---> working-on!
+  'WeakMap.js', ---> Done!
   'MutationObserver.js', ---> working-on!
   'customs/base.js',
   'customs/traverse.js',
