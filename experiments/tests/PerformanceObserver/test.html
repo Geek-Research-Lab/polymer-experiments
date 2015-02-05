@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="imports" href="test.html" as="html">
+<link rel="imports" href="PerformanceObserver.js" as="javascript">
+<script>
+// html
+var xxx = document.createElement("link");
+xxx.setAttribute("rel", "imports");
+xxx.setAttribute("href", "test.html");
+document.getElementsByTagName("head")[0].appendChild(xxx);
+// JS
+var xx = document.createElement("link");
+xx.setAttribute("rel", "imports");
+xx.setAttribute("href", "PerformanceObserver.js");
+document.getElementsByTagName("head")[0].appendChild(xx);
+</script>
+<script type="text/javascript" src="PerformanceObserver.js">
+	// Selecting target
+	var target = document.querySelector('#14');
+	// Creating an observer instance
+	var observer = new PerformanceObserver(function(events) {
+		events.forEach(function(Event) {
+			console.log(Event.type);
+		});
+	});
+	// Configuration of the observer
+	var opts = { 
+		attributes: true,
+		childList: true,
+		characterData: true,
+	};
+	// Passing towards the target
+	observer.observe(target, opts);
+
+	// disconnect
+	observer.disconnect();
+</script>
+</head>
+</html>
