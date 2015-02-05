@@ -27,11 +27,21 @@ var PerformanceObserver = function() {
 			perf.push(target);
 		}
 		Event.addListeners();
-	}
-	//
-	// Still more to code
-	//
-	};
+	},
+	// disconnect
+	disconnect: function() {
+		perf.forEach(function(key) {
+			var events = table.get(key);
+			for(var m = 0; m < events.length; m++) {
+				var Event = events[m];
+				if(Event.observer === perf) {
+					Event.removeListeners();
+					events.splice(m, 1);
+					break;
+				}
+			}
+		}, perf);
+	} };
 };
 
 /* References:-
