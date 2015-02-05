@@ -1,4 +1,4 @@
-  'WeakMap.js', --> working-on!
+  'WeakMap.js', --> done
   'core/wrappers.js',
   'core/ArraySplice.js',
   'core/microtask.js',
