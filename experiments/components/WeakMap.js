@@ -40,8 +40,8 @@ var WeakMap = function() {
 		// get
 		// WeakMap.prototype.get(k)
 		get: function(k) {
-			var ent;
-			return (ent = k[ig.name]) && ent[0] === k ? ent[1] : undefined;
+			var ent = k[ig.name];
+			return ent && ent[0] === k ? ent[1] : undefined;
 		},
 
 		// delete
