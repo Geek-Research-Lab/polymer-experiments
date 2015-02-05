@@ -1,5 +1,10 @@
-var MutationObserver = function() {
+var PerformanceObserver = function() {
 	'use strict';
+	/* MODULES
+	-- observe
+	-- disconnect
+	*/
+
 
 	//
 	// Still more to code
@@ -7,6 +12,10 @@ var MutationObserver = function() {
 };
 
 /* References:-
+[1] http://w3c.github.io/performance-timeline/#sec-performance-timeline
+[2] http://addyosmani.com/blog/the-future-of-data-binding-is-object-observe/
+*/
+/* Other References:-
 [1] https://dom.spec.whatwg.org/#mutation-observers
 [2] https://code.google.com/p/mutation-summary/
 [3] http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers
