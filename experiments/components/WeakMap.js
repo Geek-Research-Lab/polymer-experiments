@@ -1,6 +1,4 @@
 // WeakMap
-// http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-constructor
-
 var WeakMap = function() {
 	'use strict';
 	/* MODULES
@@ -25,3 +23,9 @@ var WeakMap = function() {
 	// Still more to code!
 	//
 };
+
+/*
+Credits
+[1] http://people.mozilla.org/~jorendorff/es6-draft.html#sec-weakmap-constructor
+[2] https://github.com/webcomponents/webcomponentsjs/blob/master/src/WeakMap/WeakMap.js
+*/
