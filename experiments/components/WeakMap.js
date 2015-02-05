@@ -53,12 +53,19 @@ var WeakMap = function() {
 			}
 			ent[0] = ent[1] = undefined;
 			return true;
-		}
+		},
 
-	//
-	// Still more to code!
-	//
+		// has
+		// WeakMap.prototype.has(k)
+		has: function(k) {
+			var ent = k[ig.name];
+			if(!ent) {
+				return false;
+			}
+			return ent[0] === k;
+		}
 	};
+	window.WeakMap = WeakMap;
 };
 
 /*
@@ -68,11 +75,10 @@ Credits
 */
 
 /*
-// TODO
-PDFs to read:-
+PDFs:-
 [1] http://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak/jucs_14_21_3481_3497_barros.pdf
 
-Other Links to explore:- // TODO
+Other Links to explore:-
 [1] http://docs.racket-lang.org/reference/ephemerons.html
 [2] https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmPractical.html
 [3] http://weblog.ikvm.net/PermaLink.aspx?guid=7f47ad08-cdef-4dc2-b2fd-5dfdc1baf11d
