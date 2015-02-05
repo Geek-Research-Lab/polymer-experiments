@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-	</script>
+<meta charset="utf-8">
+<link rel="imports" href="test.html" as="html">
+<link rel="imports" href="WeakMap.js" as="javascript">
+<script>
+// html
+var xxx = document.createElement("link");
+xxx.setAttribute("rel", "imports");
+xxx.setAttribute("href", "test.html");
+document.getElementsByTagName("head")[0].appendChild(xxx);
+// JS
+var xx = document.createElement("link");
+xx.setAttribute("rel", "imports");
+xx.setAttribute("href", "WeakMap.js");
+document.getElementsByTagName("head")[0].appendChild(xx);
+</script>
+<!-- Attaching JS -->
+<script type="text/javascript" src="WeakMap.js">
+// declaring WeakMaps
+var WeakMap1 = new WeakMap();
+var WeakMap2 = new WeakMap();
+var WeakMap3 = new WeakMap();
+// declaring Objects
+var Object1, Object2, Object3;
+// Set
+WeakMap1.set(Object1, "ashumeow");
+WeakMap2.set(Object2, 1991);
+WeakMap3.set(Object3, "yawning");
+// Get
+WeakMap1.get(Object1);
+WeakMap2.get(Object2);
+WeakMap3.get(Object3);
+// has
+WeakMap1.has(Object1);
+WeakMap2.has(Object2);
+WeakMap3.has(Object3);
+// delete
+WeakMap3.delete(Object3);
+</script>
 </head>
 </html>
