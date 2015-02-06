@@ -3,6 +3,7 @@ var PerformanceObserver = function() {
 	/* MODULES
 	-- observe
 	-- disconnect
+	-- observer.observe
 	*/
 	var perf = this;
 	PerformanceObserver.prototype = {
@@ -30,8 +31,8 @@ var PerformanceObserver = function() {
 	},
 	// disconnect
 	disconnect: function() {
-		perf.forEach(function(key) {
-			var events = table.get(key);
+		perf.forEach(function(target) {
+			var events = table.get(target);
 			for(var m = 0; m < events.length; m++) {
 				var Event = events[m];
 				if(Event.observer === perf) {
@@ -42,6 +43,18 @@ var PerformanceObserver = function() {
 			}
 		}, perf);
 	} };
+
+	var observer = function(events) {
+		perf.events = events;
+		// po => PerformanceObserver
+		perf.po = new PerformanceObserver(perf.handler.bind(perf));
+	};
+
+	observer.observe.prototype = {
+		//
+		// Still more to code
+		//
+	};
 };
 
 /* References:-
