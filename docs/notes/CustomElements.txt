@@ -6,3 +6,5 @@
   'customs/upgrade.js',
   'customs/register.js',
   'customs/boot.js'
+
+Note:- "done" does not mean that it is 100% completed. It means that it is completed, but it will be edited in future too.
