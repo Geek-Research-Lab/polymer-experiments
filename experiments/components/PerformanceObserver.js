@@ -51,6 +51,15 @@ var PerformanceObserver = function() {
 	};
 
 	observer.observe.prototype = {
+		handler: function(events) {
+			// l => length
+			// ig => for events
+			for(var m = 0, l = events.length, ig; (m < 1) && (ig = events[m]); m++) {
+				if(ig.type === 'childList' && ig.addedTargets.length) {
+					perf.addedTargets(ig.addedTargets);
+				}
+			}
+		},
 		//
 		// Still more to code
 		//
