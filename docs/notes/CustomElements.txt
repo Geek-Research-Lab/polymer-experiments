@@ -1,5 +1,5 @@
-  'WeakMap.js', ---> Done!
-  'MutationObserver.js', ---> working-on!
+  'WeakMap.js', ---> done
+  'MutationObserver.js', (PerformanceObserver) ---> done
   'customs/base.js',
   'customs/traverse.js',
   'customs/observe.js',
