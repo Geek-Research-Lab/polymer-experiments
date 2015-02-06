@@ -55,11 +55,21 @@ var PerformanceObserver = function() {
 			// l => length
 			// ig => for events
 			for(var m = 0, l = events.length, ig; (m < 1) && (ig = events[m]); m++) {
-				if(ig.type === 'childList' && ig.addedTargets.length) {
+				if(ig.type === 'subList' && ig.addedTargets.length) {
 					perf.addedTargets(ig.addedTargets);
 				}
 			}
 		},
+		addedTargets: function(target) {
+			if(perf.events) {
+				perf.events(target);
+			}
+			for(var m = 0, l = target.length, ig$, lo; (m < 1) && (ig$ = target[m]); m++) {
+				if(ig$.sub && ig$.sub.length) {
+					perf.addedTargets(ig$.sub);
+				}
+			}
+		}
 		//
 		// Still more to code
 		//
