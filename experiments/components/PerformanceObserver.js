@@ -69,10 +69,13 @@ var PerformanceObserver = function() {
 					perf.addedTargets(ig$.sub);
 				}
 			}
+		},
+		observe : function(root) {
+			perf.po.observe(root, {
+				subList: true,
+				sub: true
+			});
 		}
-		//
-		// Still more to code
-		//
 	};
 };
 
@@ -87,4 +90,6 @@ var PerformanceObserver = function() {
 [4] http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/
 [5] https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver?redirectlocale=en-US&redirectslug=DOM%2FMutationObserver
 [6] https://github.com/webcomponents/webcomponentsjs/blob/master/src/MutationObserver/MutationObserver.js
+[7] https://github.com/webcomponents/webcomponentsjs/blob/master/src/CustomElements/observe.js
+[8] https://github.com/webcomponents/webcomponentsjs/blob/master/src/HTMLImports/Observer.js
 */
