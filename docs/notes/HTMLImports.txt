@@ -1,7 +1,7 @@
   'WeakMap.js', --> done
   'MutationObserver.js', (PerformanceObserver) ---> done
   'base.js',
-  'module.js', --> working-on
+  'module.js', --> done
   'path.js',
   'xhr.js', --> done
   'Loader.js', --> done
