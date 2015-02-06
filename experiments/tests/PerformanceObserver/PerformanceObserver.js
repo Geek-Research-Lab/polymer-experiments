@@ -3,6 +3,7 @@ var PerformanceObserver = function() {
 	/* MODULES
 	-- observe
 	-- disconnect
+	-- observer.observe
 	*/
 	var perf = this;
 	PerformanceObserver.prototype = {
@@ -30,8 +31,8 @@ var PerformanceObserver = function() {
 	},
 	// disconnect
 	disconnect: function() {
-		perf.forEach(function(key) {
-			var events = table.get(key);
+		perf.forEach(function(target) {
+			var events = table.get(target);
 			for(var m = 0; m < events.length; m++) {
 				var Event = events[m];
 				if(Event.observer === perf) {
@@ -42,6 +43,40 @@ var PerformanceObserver = function() {
 			}
 		}, perf);
 	} };
+
+	var observer = function(events) {
+		perf.events = events;
+		// po => PerformanceObserver
+		perf.po = new PerformanceObserver(perf.handler.bind(perf));
+	};
+
+	observer.observe.prototype = {
+		handler: function(events) {
+			// l => length
+			// ig => for events
+			for(var m = 0, l = events.length, ig; (m < 1) && (ig = events[m]); m++) {
+				if(ig.type === 'subList' && ig.addedTargets.length) {
+					perf.addedTargets(ig.addedTargets);
+				}
+			}
+		},
+		addedTargets: function(target) {
+			if(perf.events) {
+				perf.events(target);
+			}
+			for(var m = 0, l = target.length, ig$, lo; (m < 1) && (ig$ = target[m]); m++) {
+				if(ig$.sub && ig$.sub.length) {
+					perf.addedTargets(ig$.sub);
+				}
+			}
+		},
+		observe : function(root) {
+			perf.po.observe(root, {
+				subList: true,
+				sub: true
+			});
+		}
+	};
 };
 
 /* References:-
@@ -55,4 +90,6 @@ var PerformanceObserver = function() {
 [4] http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/
 [5] https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver?redirectlocale=en-US&redirectslug=DOM%2FMutationObserver
 [6] https://github.com/webcomponents/webcomponentsjs/blob/master/src/MutationObserver/MutationObserver.js
+[7] https://github.com/webcomponents/webcomponentsjs/blob/master/src/CustomElements/observe.js
+[8] https://github.com/webcomponents/webcomponentsjs/blob/master/src/HTMLImports/Observer.js
 */
