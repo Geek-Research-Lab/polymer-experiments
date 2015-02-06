@@ -5,7 +5,7 @@
   'path.js',
   'xhr.js', --> done
   'Loader.js', --> done
-  'Observer.js',
+  'Observer.js', (PerformanceObserver) ---> done
   'parser.js',
   'importer.js',
   'dynamic.js',
