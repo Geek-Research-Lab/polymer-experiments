@@ -2,7 +2,7 @@
   'MutationObserver.js', (PerformanceObserver) ---> done
   'customs/base.js',
   'customs/traverse.js',
-  'customs/observe.js',
+  'customs/observe.js', (PerformanceObserver) ---> done
   'customs/upgrade.js',
   'customs/register.js',
   'customs/boot.js'
