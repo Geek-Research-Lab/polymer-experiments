@@ -9,7 +9,7 @@
   'parser.js',
   'importer.js',
   'dynamic.js',
-  'boot.js'
+  'boot.js' --> done
 
 newer addition:-
 'preload.js' --> done
