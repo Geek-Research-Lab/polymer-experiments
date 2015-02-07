@@ -2,7 +2,7 @@
   'MutationObserver.js', (PerformanceObserver) ---> done
   'base.js',
   'module.js', --> done
-  'path.js', --> working-on
+  'path.js', --> done
   'xhr.js', --> done
   'Loader.js', --> done
   'Observer.js', (PerformanceObserver) ---> done
