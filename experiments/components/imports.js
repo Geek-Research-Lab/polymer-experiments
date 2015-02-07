@@ -5,9 +5,20 @@ function imports() {
 
 	// loading JS files/modules
 	var modules = [
-	'imports/preload.js',
-	'imports/xhr.js',
-	'imports/loader.js'
+	'preload.js',
+	'xhr.js',
+	'loader.js',
+	'path.js',
+	// 'module.js',
+	/*
+	In module.js, it has addModule and InitModule...
+	it is a lot similar to booting a system..
+	I always had an intention to turn OS into Web
+	And Kernel is the core of OS
+	Always dreamed of building a web kernel ever for a long time
+	Every web browser has an interface with OS
+	In between the interface is the loophole =D
+	*/
 	];
 
 	// source
