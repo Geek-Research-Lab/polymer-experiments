@@ -1,15 +1,10 @@
-// Path
-
-// loading module
-var module = ['module.js'];
-
-module.addModule = function(gems) {
-	var css_url_regex = /(url\()([^)]*)(\))/g;
-	var css_import_regex = /(@import[\s]+(?!url\())([^;]*)(;)/g;
 
 var path = function() {
 	'use strict';
+	var CSS_URL_REGEXP = /(url\()([^)]*)(\))/g;
+	var CSS_IMPORT_REGEXP = /(@import[\s]+(?!url\())([^;]*)(;)/g;
 	var ig = this;
+	path.prototype = {
 	// Resolving URLs in Style
 	// rs => Resolving URLs in Style
 	// st => style
@@ -42,8 +37,7 @@ var path = function() {
 			up = uo.href;
 			return pre + '\'' + up + '\'' + post;
 		});
-	}
+	} };
+	// exporting
+	gems.path = path;
 }; 
-// exporting
-gems.path = path;
-};
