@@ -7,7 +7,7 @@ Interested to do experiments?? <br>
 To build something in own, then download the following packages:-<br>
 [1] p0.0.0 ==> <a href="https://github.com/Geek-Research-Lab/polymer-experiments/archive/p0.0.0.zip">DOWNLOAD</a>
 <br>
-[2] MeowJS (latest release) ==> <a href="https://github.com/Geek-Research-Lab/MeowJS/archive/v0.5.1.zip">DOWNLOAD</a>
+[2] MeowJS (latest release) ==> <a href="https://github.com/Geek-Research-Lab/MeowJS/archive/v0.5.2.zip">DOWNLOAD</a>
 <br>
 And start exploring! Do something crazy with it. 
 <br>
