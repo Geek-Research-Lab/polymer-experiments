@@ -3,4 +3,14 @@ Status: Working
 --------------Scribbles------------
 https://lists.w3.org/Archives/Public/public-web-perf/2015Feb/0013.html
 
---- Contents will be added soon ---
+doc:- 
+https://docs.google.com/document/d/1fXtxtPC1Gg4PeLXI_axj6AvMTznf9X5lrj5HTyR3r3w/edit#heading=h.uvks9vtq552t
+
+Specs to eat up well:- //TODO
+Performance timeline --- http://www.w3.org/TR/performance-timeline/
+Fetch --- http://www.w3.org/TR/html5/infrastructure.html#fetch
+Navigating across docs --- http://www.w3.org/TR/html5/browsers.html#navigate
+High resolution time --- http://www.w3.org/TR/hr-time/
+Page visibility --- http://www.w3.org/TR/page-visibility/
+WebIDL --- http://www.w3.org/TR/WebIDL/
+User timing --- http://www.w3.org/TR/user-timing/
