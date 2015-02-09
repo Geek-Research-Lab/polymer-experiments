@@ -14,3 +14,4 @@ High resolution time --- http://www.w3.org/TR/hr-time/
 Page visibility --- http://www.w3.org/TR/page-visibility/
 WebIDL --- http://www.w3.org/TR/WebIDL/
 User timing --- http://www.w3.org/TR/user-timing/
+Frame timing --- https://w3c.github.io/frame-timing/
