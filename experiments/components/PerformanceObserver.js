@@ -4,6 +4,8 @@ var PerformanceObserver = function() {
 	-- observe
 	-- disconnect
 	-- observer.observe
+	-- add observer
+	-- remove observer
 	*/
 	var perf = this;
 	PerformanceObserver.prototype = {
@@ -77,6 +79,10 @@ var PerformanceObserver = function() {
 			});
 		}
 	};
+
+	// TODO
+	// add observer
+	// remove observer
 };
 
 /* References:-
@@ -92,4 +98,5 @@ var PerformanceObserver = function() {
 [6] https://github.com/webcomponents/webcomponentsjs/blob/master/src/MutationObserver/MutationObserver.js
 [7] https://github.com/webcomponents/webcomponentsjs/blob/master/src/CustomElements/observe.js
 [8] https://github.com/webcomponents/webcomponentsjs/blob/master/src/HTMLImports/Observer.js
+[9] https://github.com/webcomponents/webcomponentsjs/blob/master/src/ShadowDOM/MutationObserver.js
 */
