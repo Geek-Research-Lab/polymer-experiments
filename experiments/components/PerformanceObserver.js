@@ -97,6 +97,21 @@ Event.prototype = {
 			table.set(target, events = []);
 		}
 		events.push(perf);
+	},
+	// remove observer
+	removeObserver: function() {
+		var observedTargets = perf.observedTargets;
+		perf.observedTargets = [];
+		for(var m = 0; m < observedTargets.length; m++) {
+			var target = observedTargets[m];
+			var events = table.get(target);
+			for(var ig = 0; ig < events.length; ig++) {
+				if(events[ig] === perf) {
+					events.splice(ig, 1);
+					break;
+				}
+			}
+		}
 	}
 };
 
