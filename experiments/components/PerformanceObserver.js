@@ -88,8 +88,12 @@ Event.prototype = {
 		if(target === perf.target) {
 			return;
 		}
-		// Make sure to remove transient observers at the end of microtask.
-		// Scheduling callback
+
+		// Make sure to remove transient observers at the end of 'microtask'.
+		/*
+		http://www.w3.org/TR/html5/webappapis.html#calling-scripts
+		*/
+		// Scheduling callback => Allows to execute the task immediately
 		callback(perf.observer);
 		perf.observedTargets.push(target);
 		var events = table.get(target);
@@ -98,6 +102,7 @@ Event.prototype = {
 		}
 		events.push(perf);
 	},
+	
 	// remove observer
 	removeObserver: function() {
 		var observedTargets = perf.observedTargets;
@@ -131,4 +136,5 @@ Event.prototype = {
 [7] https://github.com/webcomponents/webcomponentsjs/blob/master/src/CustomElements/observe.js
 [8] https://github.com/webcomponents/webcomponentsjs/blob/master/src/HTMLImports/Observer.js
 [9] https://github.com/webcomponents/webcomponentsjs/blob/master/src/ShadowDOM/MutationObserver.js
+[10] http://www.w3.org/html/wg/drafts/html/master/
 */
