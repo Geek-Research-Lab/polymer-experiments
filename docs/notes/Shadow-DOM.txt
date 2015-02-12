@@ -2,7 +2,7 @@
   'core/wrappers.js',
   'core/ArraySplice.js',
   'core/microtask.js',
-  'core/MutationObserver.js', (PerformanceObserver) ---> working-on!
+  'core/MutationObserver.js', (PerformanceObserver) ---> done
   'core/TreeScope.js',
   'core/wrappers/events.js',
   'core/wrappers/TouchEvent.js',
