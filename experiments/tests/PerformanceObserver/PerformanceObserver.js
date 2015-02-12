@@ -91,7 +91,8 @@ Event.prototype = {
 
 		// Make sure to remove transient observers at the end of 'microtask'.
 		/*
-		http://www.w3.org/TR/html5/webappapis.html#calling-scripts
+		[a] http://www.w3.org/TR/html5/webappapis.html#calling-scripts
+		[b] https://hg.mozilla.org/mozilla-central/rev/77f0e7d882dd
 		*/
 		// Scheduling callback => Allows to execute the task immediately
 		callback(perf.observer);
@@ -102,7 +103,7 @@ Event.prototype = {
 		}
 		events.push(perf);
 	},
-	
+
 	// remove observer
 	removeObserver: function() {
 		var observedTargets = perf.observedTargets;
