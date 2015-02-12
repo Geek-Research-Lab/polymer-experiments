@@ -4,6 +4,8 @@ var PerformanceObserver = function() {
 	-- observe
 	-- disconnect
 	-- observer.observe
+	-- add observer
+	-- remove observer
 	*/
 	var perf = this;
 	PerformanceObserver.prototype = {
@@ -77,6 +79,42 @@ var PerformanceObserver = function() {
 			});
 		}
 	};
+
+Event.prototype = {
+	// add observer => A 'transient observer' is added that can last for a 'short period of time'.
+	addObserver: function(target) {
+		// Don't add or include transient observer on the 'target' itself
+		// Listeners are already setup on the target
+		if(target === perf.target) {
+			return;
+		}
+		// Make sure to remove transient observers at the end of microtask.
+		// Scheduling callback
+		callback(perf.observer);
+		perf.observedTargets.push(target);
+		var events = table.get(target);
+		if(!events) {
+			table.set(target, events = []);
+		}
+		events.push(perf);
+	},
+	// remove observer
+	removeObserver: function() {
+		var observedTargets = perf.observedTargets;
+		perf.observedTargets = [];
+		for(var m = 0; m < observedTargets.length; m++) {
+			var target = observedTargets[m];
+			var events = table.get(target);
+			for(var ig = 0; ig < events.length; ig++) {
+				if(events[ig] === perf) {
+					events.splice(ig, 1);
+					break;
+				}
+			}
+		}
+	}
+};
+
 };
 
 /* References:-
@@ -92,4 +130,5 @@ var PerformanceObserver = function() {
 [6] https://github.com/webcomponents/webcomponentsjs/blob/master/src/MutationObserver/MutationObserver.js
 [7] https://github.com/webcomponents/webcomponentsjs/blob/master/src/CustomElements/observe.js
 [8] https://github.com/webcomponents/webcomponentsjs/blob/master/src/HTMLImports/Observer.js
+[9] https://github.com/webcomponents/webcomponentsjs/blob/master/src/ShadowDOM/MutationObserver.js
 */
