@@ -80,7 +80,7 @@ var PerformanceObserver = function() {
 		}
 	};
 
-event.prototype = {
+Event.prototype = {
 	// add observer => A 'transient observer' is added that can last for a 'short period of time'.
 	addObserver: function(target) {
 		// Don't add or include transient observer on the 'target' itself
@@ -88,11 +88,15 @@ event.prototype = {
 		if(target === perf.target) {
 			return;
 		}
-		// Make aure to reomove transient observers
+		// Make sure to remove transient observers at the end of microtask.
+		// Scheduling callback
 		callback(perf.observer);
-		//
-		// Still more to code!
-		//
+		perf.observedTargets.push(target);
+		var events = table.get(target);
+		if(!events) {
+			table.set(target, events = []);
+		}
+		events.push(perf);
 	}
 };
 
