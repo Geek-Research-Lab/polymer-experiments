@@ -1,5 +1,13 @@
 Status: Working
 
+-------------Work along with references--------------
+
+https://github.com/Geek-Research-Lab/polymer-experiments/blob/webcomponents-mix/experiments/components/PerformanceObserver.js
+
+--------------An interesting presentation-----------
+// TODO - Need to do depth research
+http://www.w3.org/2006/Talks/0919-dsr-ubiweb/ubiweb.pdf
+
 --------------Scribbles------------
 https://lists.w3.org/Archives/Public/public-web-perf/2015Feb/0013.html
 
