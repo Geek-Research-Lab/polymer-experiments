@@ -23,3 +23,10 @@ Page visibility --- http://www.w3.org/TR/page-visibility/
 WebIDL --- http://www.w3.org/TR/WebIDL/
 User timing --- http://www.w3.org/TR/user-timing/
 Frame timing --- https://w3c.github.io/frame-timing/
+
+Stuffs to drink up:- //TODO
+Navigation Timing (Processing Model) --- https://w3c.github.io/navigation-timing/#processing-model
+Navigation Error Logging --- https://w3c.github.io/navigation-error-logging/
+Resource Timing (Processing Model) --- http://w3c.github.io/resource-timing/#processing-model
+(Ref - discussion:- https://lists.w3.org/Archives/Public/public-web-perf/2015Feb/0059.html )
+Web Performance Entry Types --- http://www.w3.org/wiki/Web_Performance/EntryType
