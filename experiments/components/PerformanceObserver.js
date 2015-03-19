@@ -1,9 +1,15 @@
 var PerformanceObserver = function() {
 	'use strict';
-	/* MODULES
+	/* MODULES 
+	1. PerformanceObserver.prototype
 	-- observe
+	-- connect (init)
 	-- disconnect
-	-- observer.observe
+	2. observer.observe.prototype
+	-- handler
+	-- addedTargets
+	-- observe
+	3. Event.prototype
 	-- add observer
 	-- remove observer
 	*/
@@ -30,6 +36,13 @@ var PerformanceObserver = function() {
 			perf.push(target);
 		}
 		Event.addListeners();
+	},
+	// connect --- initializing
+	connect: function() {
+		perf.mark("startWork"); // see [[User Timing]]
+		doWork(); // Some developer code
+		perf.mark("endWork");
+		measurePerf();
 	},
 	// disconnect
 	disconnect: function() {
@@ -124,8 +137,10 @@ Event.prototype = {
 };
 
 /* References:-
-[1] http://w3c.github.io/performance-timeline/#sec-performance-timeline
+[1] https://w3c.github.io/performance-timeline
 [2] http://addyosmani.com/blog/the-future-of-data-binding-is-object-observe/
+[3] https://developer.chrome.com/devtools/docs/timeline#loading-event-properties
+[4] https://lists.w3.org/Archives/Public/public-web-perf/
 */
 /* Other References:-
 [1] https://dom.spec.whatwg.org/#mutation-observers
@@ -138,4 +153,6 @@ Event.prototype = {
 [8] https://github.com/webcomponents/webcomponentsjs/blob/master/src/HTMLImports/Observer.js
 [9] https://github.com/webcomponents/webcomponentsjs/blob/master/src/ShadowDOM/MutationObserver.js
 [10] http://www.w3.org/html/wg/drafts/html/master/
+[11] https://github.com/w3c/performance-timeline/tree/performanceobserver
+[12] http://www.w3.org/TR/dom/#mutation-observers
 */
