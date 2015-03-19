@@ -4,6 +4,7 @@ var PerformanceObserver = function() {
 	1. PerformanceObserver.prototype
 	-- observe
 	-- connect (init)
+	-- measure performance
 	-- disconnect
 	2. observer.observe.prototype
 	-- handler
@@ -43,6 +44,16 @@ var PerformanceObserver = function() {
 		doWork(); // Some developer code
 		perf.mark("endWork");
 		measurePerf();
+	},
+	// measure performance
+	measurePerf: function() {
+		var perfEntries = performance.getEntries();
+		for (var m = 0; m < perfEntries.length; m++)
+		{
+			if (window.console) {
+				console.log("Name:"+ perfEntries[i].name + " Entry Type: " + perfEntries[i].entryType + " Start Time: " + perfEntries[i].startTime + " Duration: " + perfEntries[i].duration + "\n");
+			}
+		}
 	},
 	// disconnect
 	disconnect: function() {
