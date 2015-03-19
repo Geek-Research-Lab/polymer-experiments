@@ -5,17 +5,17 @@ Status: Working
 https://github.com/Geek-Research-Lab/polymer-experiments/blob/webcomponents-mix/experiments/components/PerformanceObserver.js
 
 --------------An interesting presentation-----------
-// TODO - Need to do depth research
 http://www.w3.org/2006/Talks/0919-dsr-ubiweb/ubiweb.pdf
 
 --------------Scribbles------------
+https://lists.w3.org/Archives/Public/public-web-perf
 https://lists.w3.org/Archives/Public/public-web-perf/2015Feb/0013.html
 
 doc:- 
+https://developer.chrome.com/devtools/docs/timeline#loading-event-properties
 https://docs.google.com/document/d/1fXtxtPC1Gg4PeLXI_axj6AvMTznf9X5lrj5HTyR3r3w/edit#heading=h.uvks9vtq552t
 
-Specs to eat up well:- //TODO
-Performance timeline --- http://www.w3.org/TR/performance-timeline/
+Performance timeline --- https://w3c.github.io/performance-timeline
 Fetch --- http://www.w3.org/TR/html5/infrastructure.html#fetch
 Navigating across docs --- http://www.w3.org/TR/html5/browsers.html#navigate
 High resolution time --- http://www.w3.org/TR/hr-time/
@@ -23,8 +23,6 @@ Page visibility --- http://www.w3.org/TR/page-visibility/
 WebIDL --- http://www.w3.org/TR/WebIDL/
 User timing --- http://www.w3.org/TR/user-timing/
 Frame timing --- https://w3c.github.io/frame-timing/
-
-Stuffs to drink up:- //TODO
 Navigation Timing (Processing Model) --- https://w3c.github.io/navigation-timing/#processing-model
 Navigation Error Logging --- https://w3c.github.io/navigation-error-logging/
 Resource Timing (Processing Model) --- http://w3c.github.io/resource-timing/#processing-model
