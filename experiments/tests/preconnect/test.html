@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preload" href="test.html" as="html">
+<link rel="preload" href="preload.js" as="javascript">
+<link href='https://fonts.gstatic.com' rel="preconnect">
+<script>
+// html
+var yyy = document.createElement("link");
+yyy.setAttribute("rel", "preconnect");
+yyy.setAttribute("href", "test.html");
+document.getElementsByTagName("head")[0].appendChild(yyy);
+// console.log("Preconnecting to destination...");
+
+var xxx = document.createElement("link");
+xxx.setAttribute("rel", "preload");
+xxx.setAttribute("href", "test.html");
+document.getElementsByTagName("head")[0].appendChild(xxx);
+// console.log("Preloading to destination...");
+
+// JS
+var yy = document.createElement("link");
+yy.setAttribute("rel", "preconnect");
+yy.setAttribute("href", "preconnect.js");
+document.getElementsByTagName("head")[0].appendChild(yy);
+
+var xx = document.createElement("link");
+xx.setAttribute("rel", "preload");
+xx.setAttribute("href", "preload.js");
+document.getElementsByTagName("head")[0].appendChild(xx);
+</script>
+<script type="text/javascript" src="preload.js">
+// preloading assets
+	onPreload(a);
+</script>
+</head>
+<body>
+--- add contents ---
+</body>
+</html>
