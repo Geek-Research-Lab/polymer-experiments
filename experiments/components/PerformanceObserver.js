@@ -51,7 +51,11 @@ var PerformanceObserver = function() {
 		for (var m = 0; m < perfEntries.length; m++)
 		{
 			if (window.console) {
-				console.log("Name:"+ perfEntries[i].name + " Entry Type: " + perfEntries[i].entryType + " Start Time: " + perfEntries[i].startTime + " Duration: " + perfEntries[i].duration + "\n");
+				// Entry Type
+				// Start Time
+				// Duration
+				// Group -- https://github.com/w3c/performance-timeline/pull/9
+				console.log("Name:"+ perfEntries[m].name + " Entry Type: " + perfEntries[m].entryType + " Start Time: " + perfEntries[m].startTime + " Duration: " + perfEntries[m].duration + " Group: " + perfEntries[m].group + "\n");
 			}
 		}
 	},
